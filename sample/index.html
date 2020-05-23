@@ -101,6 +101,18 @@
 			– Frederico Knabben. All rights reserved.
 		</p>
 	</footer>
+
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+		});
+		</script>
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+
+
+
 	<script src="../build/ckeditor.js"></script>
 	<script>BalloonBlockEditor
 			.create( document.querySelector( '.editor' ), {
@@ -127,7 +139,8 @@
 					'insertTable',
 					'imageUpload',
 					'codeBlock',
-					'mediaEmbed'
+					'mediaEmbed',
+					'math'
 				],
 				image: {
 					toolbar: [
@@ -144,6 +157,12 @@
 						'tableCellProperties',
 						'tableProperties'
 					]
+				},
+				math: {
+					engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
+					outputType: 'script', // or span
+					forceOutputType: false, // forces output to use outputType
+					enablePreview: true // Enable preview view
 				},
 				licenseKey: '',
 				

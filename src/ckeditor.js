@@ -43,6 +43,7 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import WordCount from '@ckeditor/ckeditor5-word-count/src/wordcount.js';
+import Mathematics from "ckeditor5-math/src/math";
 
 class Editor extends BalloonBlockEditor {}
 
@@ -87,7 +88,8 @@ Editor.builtinPlugins = [
 	TextTransformation,
 	TodoList,
 	Underline,
-	WordCount
+	WordCount,
+	Mathematics
 ];
 
 export default Editor;
